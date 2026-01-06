@@ -11,17 +11,21 @@
         document.write("<br><hr><br>");
     }
 
+    var nome = prompt("Bom dia! Qual é a seu nome?");
+    var pesoDoUsuario = prompt( nome + ", qual é o seu peso?");
+    var alturaDoUsuario = prompt("e sua altura?")
+
     var peso = 75;
     var altura = 1.72;
     var imc = peso / (altura * altura);
 
-    mostra("Meu IMC é: " + imc );
+    mostra("Meu IMC é: " + Math.round(imc));
     
     var pesoDoPrimo = 83;
     var alturaDoPrimo = 1.76;
     var imcDoPrimo = pesoDoPrimo / (alturaDoPrimo * alturaDoPrimo);
-    mostra("IMC de meu primo é: " + imcDoPrimo);
-    mostra("Ele ainda está " + (imcDoPrimo - 18.5)
+    mostra("IMC de meu primo é: " + Math.round(imcDoPrimo));
+    mostra("Ele ainda está " + Math.round(imcDoPrimo - 18.5)
 + " pontos acima do limite da magreza.");
 
     function calculaIMC(altura, peso) {
@@ -37,12 +41,13 @@
     var altura = 1.72;
     var imc = calculaIMC(altura, peso);
 
-    mostra("Meu imc é " + imc);
-    mostra("Ainda estou " + (imc - 18.5)
+    mostra("Meu imc é " + Math.round(imc));
+    mostra("Ainda estou " + Math.round(imc - 18.5)
 + " pontos acima do limite da magreza.");
 
 mostra("Meu imc é " + Math.round(imc));
 
-
+var imcDoUsuario = calculaIMC(alturaDoUsuario, pesoDoUsuario);
+    mostra( nome + ", seu imc é " + Math.round(imcDoUsuario));
 
 </script>
